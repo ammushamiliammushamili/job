@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/stylesheets/signup.css">
+
+<div class="flex-container">
+    <div class="flex-child image"></div>
+    <div class="flex-child text">
+
+        <form action="/signup" method="post">
+            <h1 class="heading">sign up</h1>
+
+            <input type="text" name="username" placeholder="username" id="username" /><br /><br />
+            <input type="email" name="email" placeholder="email" id="email" /><br /><br />
+            {{!-- <input type="text" name="address" placeholder="address" id="address"><br><br> --}}
+            <textarea name="address" id="address" placeholder="address" cols="30" rows="10"></textarea><br /><br />
+            <input type="password" name="password" placeholder="password" id="password" /><br /><br />
+            <input type="number" name="number" placeholder="mobile number" id="number"><br><br>
+            <select name="workStatus">
+                <option value="">Work Status</option>
+                <option>fresher</option>
+                <option>experienced</option>
+            </select><br><br>
+
+            <button type="submit">register now</button>
+
+    </div>
+</div>

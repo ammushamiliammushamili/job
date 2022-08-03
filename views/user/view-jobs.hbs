@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/stylesheets/view-jobs.css">
+
+
+<h2>view job</h2>
+{{#each allJobs}}
+<div class="card" style="width: 900px; height:300px ">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="http://www.wallpapers13.com/wp-content/uploads/2016/01/Forest-Falls-desktop-background-wallpaper-1592428-25600x1600-falls-1366x768.jpg"
+                class="img-fluid rounded-start" alt="..." style="height: 300px;">
+
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title text-warning">{{jobtitle}}</h5>
+            </div>
+            <div class="data">
+                <p>{{companyName}}</p>
+                <p>{{ description}}</p>
+                <p>{{vaccancy}}</p>
+                <p>{{salary}}</p>
+                <p>{{area}}</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+{{/each}}

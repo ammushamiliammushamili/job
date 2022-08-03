@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-image: url(https://thumbs.dreamstime.com/b/business-workplace-computer-wireless-keyboard-keys-old-green-wooden-table-background-office-desk-copy-space-97304468.jpg);
+}
+
+input {
+    width: 600px;
+    height: 40px;
+    /* border-radius: 15px; */
+    color: black;
+    font-weight: 700;
+    font-style: italic;
+    box-shadow: 10px 10px rgb(5, 52, 5);
+    /* margin-left: 500px; */
+    margin-top: 0.20px;
+}
+
+h1 {
+    padding-left: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    /* background-color: rgb(75, 9, 9); */
+    color: rgb(8, 60, 12);
+    /* margin-right: 200px; */
+    font-size: 60px;
+    margin-top: 0.5px;
+}
+
+select {
+    width: 610px;
+    height: 40px;
+    box-shadow: 10px 10px rgb(5, 52, 5);
+    border-color: black;
+
+}
+
+textarea {
+    width: 610px;
+    height: 40px;
+    box-shadow: 10px 10px rgb(5, 52, 5);
+
+}
+
+button {
+    width: 300px;
+    height: 40px;
+    margin-left: 150px;
+    margin-top: 5px;
+    /* margin-bottom:px; */
+    color: rgb(88, 7, 57);
+    /* border-radius: 15px; */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: large;
+    color: white;
+    background-color: rgb(9, 169, 17);
+}

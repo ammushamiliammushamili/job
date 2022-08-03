@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-image: url(https://thumbs.dreamstime.com/b/office-desk-table-computer-keyboard-notepad-pen-supplies-green-plant-light-wood-background-top-view-flat-lay-workspace-184188901.jpg);
+}
+
+input {
+    width: 600px;
+    height: 40px;
+    /* border-radius: 15px; */
+    color: black;
+    font-weight: 700;
+    font-style: italic;
+    box-shadow: 10px 10px;
+    padding: 7px;
+    margin-left: 400px;
+    /* margin-top: 40px; */
+}
+
+h1 {
+    padding-left: 550px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    /* background-color: rgb(75, 9, 9); */
+    color: black;
+    margin-right: 60px;
+    font-size: 60px;
+    margin-top: 30px;
+}
+
+select {
+    width: 610px;
+    height: 40px;
+    box-shadow: 10px 10px;
+    border-color: black;
+    font-style: italic;
+    padding: 7px;
+    margin-left: 400px;
+
+}
+
+textarea {
+    width: 610px;
+    height: 40px;
+    box-shadow: 10px 10px rgb(5, 52, 5);
+
+}
+
+button {
+    width: 300px;
+    height: 40px;
+    margin-left: 550px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: black;
+    /* border-radius: 15px; */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: large;
+    color: white;
+}

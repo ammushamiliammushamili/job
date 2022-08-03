@@ -6,7 +6,7 @@ body {
     align-items: center;
     justify-content: center;
     background-size: cover;
-    background-image: url(https://www.freeppt7.com/uploads/200513/1-2005131F04Q36.jpg);
+    background-image: url(https://image.freepik.com/free-photo/vintage-camera-pencil-open-laptop-twig-isolated-white-background_23-2147979091.jpg);
 }
 
 input {
@@ -17,7 +17,10 @@ input {
     font-weight: 700;
     font-style: italic;
     box-shadow: 10px 10px;
-    margin-left: 100px;
+}
+
+input:hover {
+    background-color: rgb(122, 118, 118);
 }
 
 input,
@@ -25,10 +28,28 @@ input,
     color: #000;
 }
 
+select {
+    width: 610px;
+    height: 40px;
+    /* border-radius: 15px; */
+    color: rgb(29, 29, 14);
+    font-style: italic;
+    color: #000;
+    font-weight: 700;
+    box-shadow: 10px 10px;
+
+
+}
+
+select:hover {
+    background-color: rgb(122, 118, 118);
+
+}
+
 button {
     width: 300px;
     height: 40px;
-    margin-left: 250px;
+    margin-left: 130px;
     margin-top: 30px;
     margin-bottom: 20px;
     background-color: black;
@@ -52,36 +73,20 @@ button {
 
 h1 {
     padding-right: 700px;
-    padding-left: 290px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 40px;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
     /* background-color: rgb(75, 9, 9); */
     color: black;
-    /* margin-right: 20px; */
-    margin-right: 100px;
-}
-
-textarea {
-    width: 600px;
-    height: 40px;
-    box-shadow: 10px 10px;
-    font-style: italic;
-    border-color: #000;
-    margin-left: 100px;
+    margin-right: 80px;
 
 
 }
 
-select {
-    width: 610px;
-    height: 40px;
-    /* border-radius: 15px; */
-    color: rgb(29, 29, 14);
-    font-style: italic;
-    color: #000;
-    font-weight: 700;
-    box-shadow: 10px 10px;
-    margin-left: 100px;
-
+.side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
 
 }

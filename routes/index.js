@@ -1,18 +1,37 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express', name: 'shamili', marks: { cs: 70 } });
-});
-router.get('/login', function (req, res) {
-  res.render('login', { companiname: 'zion IT' })
-})
-router.get('/signup', function (req, res) {
-  res.render('users/signup', { username: 'shamili', phonenumber: '123456765' })
-})
-router.get('/profile', function (req, res) {
-  res.render('users/profile')
-})
+let {
+    // getHomePage,
+    getSignupPage,
+    createUser,
+    userLoginPage,
+    userProfilepage,
+    userUpdatePage,
+    doLogin,
+    viewjobsPage,
+    getHomePage,
+} = require("../controllers/user-controller");
+const checkUser = require("../middilewares/check-user");
 
+/* GET home page. */
+
+router.get("/", checkUser, getHomePage);
+// router.get("/home", getHomePage);
+// router.get("/login", function (req, res) {
+//   res.render("login", { companyname: "zion it" });
+// });
+// router.get("/signup", getSignupPage);
+
+// router.post("/signup", createUser);
+
+router.route("/signup").get(getSignupPage).post(createUser);
+
+router.route("/login").get(userLoginPage).post(doLogin);
+
+router.get("/profile", userProfilepage);
+
+router.get("/update", userUpdatePage);
+
+router.get("/viewjobs", checkUser, viewjobsPage)
 module.exports = router;
