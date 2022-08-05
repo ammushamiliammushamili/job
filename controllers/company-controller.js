@@ -2,6 +2,8 @@ const CompanyModel = require("../models/company-model");
 const JobModel = require("../models/job-model");
 const bcrypt = require("bcrypt");
 const req = require("express/lib/request");
+const companyModel = require("../models/company-model");
+const async = require("hbs/lib/async");
 // const companyModel = require("../models/company-model");
 
 const createCompany = async function (req, res) {
@@ -52,7 +54,7 @@ const doLogin = async function (req, res) {
 }
 const getProfilePage = function (req, res) {
   console.log(req.session.company);
-  res.render("company/company-profile");
+  res.render("company/company-profile", { company: req.session.company });
 };
 
 const addJobPage = function (req, res) {
@@ -60,14 +62,30 @@ const addJobPage = function (req, res) {
 };
 const addjob = async function (req, res) {
   console.log(req.body);
-  req.body.companyName = req.session.company.company.companyname;
-  req.body.companyId = req.session.company.company._id;
+  req.body.companyName = req.session.company.companyname;
+  req.body.companyId = req.session.company._id;
   await JobModel.create(req.body);
   res.redirect("/company/home");
 
 };
+const companyUpdatePage = async function (req, res) {
+  let { _id } = req.session.company;
+  let { image } = req.files;
+  await image.mv('./public/images/company/profile/' + _id + ".jpg")
+  req.body.additionalInform = true
+  let company = await companyModel.findOneAndUpdate({ _id: req.session._id },
+    req.body, { new: true }
+  )
+  console.log(company);
+  req.session.company = company
+  res.redirect('/company/compprofile')
+  // console.log(req.body);
+
+}
+
 const getUpdatePage = function (req, res) {
-  res.render("company/update-company-page");
+  console.log(req.session.company);
+  res.render("company/update-company-page", { company: req.session.company });
 };
 
 module.exports = {
@@ -80,4 +98,5 @@ module.exports = {
   getUpdatePage,
   doLogin,
   addjob,
+  companyUpdatePage
 };

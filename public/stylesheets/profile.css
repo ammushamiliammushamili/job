@@ -6,13 +6,52 @@ body {
     align-items: center;
     justify-content: center;
     background-size: cover;
-    background-image: url(https://tse4.mm.bing.net/th?id=OIP.xedzAz7--JIv0Z08gAG9yQHaEK&pid=Api&P=0);
+    background-image: url('https://static.pexels.com/photos/434337/pexels-photo-434337.jpeg');
 }
 
 .image {
-    width: 10px;
+    width: 15px;
+    margin-top: 40px;
+    /* margin-top: 280; */
+
 }
 
 .name {
     padding-right: 180px;
+    color: rgb(25, 28, 20);
+    /* margin-top: 300px; */
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    /* background-color: aqua; */
+    margin-left: 50px;
+}
+
+#dob {
+    color: brown;
+    margin-left: 420px;
+}
+
+p {
+    margin-left: 420px;
+    margin-top: 10px;
+    font-weight: 800;
+    font-size: 20px;
+    color: brown;
+}
+
+button {
+    margin-left: 350px;
+    margin-top: 30px;
+    width: 80px;
+    height: 40px;
+    border-radius: 25px;
+
+}
+
+img {
+    width: 200px;
+    height: 200px;
 }

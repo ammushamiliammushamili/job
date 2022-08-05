@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 50vh;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-image: url('https://tse4.mm.bing.net/th?id=OIP.ylVorapxrr0_V-x0pYkndwHaE7&pid=Api&P=0');
+}
+
+.image {
+    width: 15px;
+    margin-top: 40px;
+    /* margin-top: 280; */
+
+}
+
+.data {
+    margin-right: 350px;
+    color: white;
+    font-weight: 600;
+    font-style: italic;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    font-weight: 900;
+    border-radius: 15px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}

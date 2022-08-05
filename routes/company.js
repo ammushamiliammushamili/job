@@ -11,6 +11,7 @@ let {
     getUpdatePage,
     doLogin,
     addjob,
+    companyUpdatePage,
 } = require("../controllers/company-controller");
 const checkcompany = require("../middilewares/check-company");
 // const { doLogin } = require("../controllers/user-controller");
@@ -26,12 +27,14 @@ router.get("/complogin", getLoginPage);
 
 router.post("/complogin", doLogin);
 
-router.get("/compprofile", getProfilePage);
+router.get("/compprofile", checkcompany, getProfilePage);
 
 router.get("/addjob", checkcompany, addJobPage);
 router.post("/addjob", checkcompany, addjob);
 
-router.get("/updatecompany", getUpdatePage);
+router.get("/updatecompany", checkcompany, getUpdatePage);
+router.post('/updatecompany', companyUpdatePage)
+
 router.get("/home", checkcompany, companyHomepage);
 
 module.exports = router;

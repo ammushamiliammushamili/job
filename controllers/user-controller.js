@@ -1,6 +1,8 @@
 const UserModel = require("../models/user-model");
 const bcrypt = require("bcrypt");
 const JobModel = require("../models/job-model");
+const userModel = require("../models/user-model");
+const async = require("hbs/lib/async");
 
 
 const createUser = async function (req, res) {
@@ -8,7 +10,8 @@ const createUser = async function (req, res) {
     req.body.password = hash;
     console.log(req.body);
     await UserModel.create(req.body);
-    res.send("hi");
+    // res.send("hi");
+    res.redirect('/login')
 };
 
 const getHomePage = function (req, res, next) {
@@ -20,6 +23,9 @@ const getSignupPage = function (req, res) {
     res.render("user/signup", { name: "shamili" });
 };
 
+const userhomepage = function (req, res) {
+    res.render('user/home-page')
+}
 const userLoginPage = function (req, res) {
     if (req.session.Errormsg) {
         console.log(req.session.Errormsg);
@@ -37,7 +43,7 @@ const doLogin = async function (req, res) {
         if (validPassword) {
             req.session.user = user
             // res.send("successfully login");
-            res.redirect('/home')
+            res.redirect('/homepage')
         } else {
             req.session.Errormsg = "worong password"
             res.redirect("/login");
@@ -50,13 +56,30 @@ const doLogin = async function (req, res) {
 
 const userProfilepage = function (req, res) {
     console.log(req.session.user);
-    res.render("user/user-profile", { name: "shamili" });
+    res.render("user/user-profile", { user: req.session.user });
+
 };
 
 const userUpdatePage = function (req, res) {
     console.log(req.session.user);
-    res.render("user/user-update");
+    res.render("user/user-update", { user: req.session.user });
 };
+const updateuserprofile = async function (req, res) {
+    let { _id } = req.session.user;
+    let { image, resume } = req.files
+    await image.mv('./public/images/user/profile/' + _id + ".jpg")
+    await resume.mv('./public/images/user/resume/' + _id + ".pdf")
+    req.body.additionalinform = true
+    let user = await UserModel.findOneAndUpdate({ _id: req.session.user._id },
+        req.body, { new: true }
+    )
+    console.log(user);
+    req.session.user = user
+    // req.session.user._id = user._conditions._id
+    res.redirect('/profile')
+    // console.log(req.body);
+    console.log(req.files);
+}
 const viewjobsPage = async function (req, res) {
     let allJobs = await JobModel.find({})
     console.log(allJobs);
@@ -71,5 +94,7 @@ module.exports = {
     userProfilepage,
     userUpdatePage,
     doLogin,
-    viewjobsPage
+    viewjobsPage,
+    userhomepage,
+    updateuserprofile
 };

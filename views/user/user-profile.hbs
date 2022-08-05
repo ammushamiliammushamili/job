@@ -1,21 +1,30 @@
 <link rel="stylesheet" href="/stylesheets/profile.css">
 <div class="main">
-    <div class="image">
-        <img src="https://tse2.mm.bing.net/th?id=OIP.OxMQNMLB1Ze7po7bAjacNAHaHa&pid=Api&P=0 " style="width: 200px;">
-    </div>
-    <div class="name">
-        <h1>shamili</h1>
-    </div>
 
-    <div class="data">
+    <div class="container">
+        <div class="image">
+            {{#if user.additionalinform}}
+            <img src="/images/user/profile/{{user._id}}.jpg">
+            {{else}}
+            <img src="/images/user/profile/no_user.jpg">
+            {{/if}}
 
-        <p id="dob">dob</p>
-        <p>gender</p>
-        <p>address</p>
-        <p>phone number</p>
-        <p>email</p>
-        <p>qualification</p>
-        <p>languages</p>
-        <button>update</button>
+        </div>
+        <div class="name">
+            <h1>{{user.username}}</h1>
+        </div>
+
+        <div class="data">
+
+            <p id="dob">{{user.username}}</p>
+            <p>{{user.address}}</p>
+            <p>{{user.email}}</p>
+            <p>{{user.number}}</p>
+            <p>{{user.skills}}</p>
+            <p>{{user.education}}</p>
+            {{!-- <iframe src="/images/user/resume/{{user._id}}.pdf"></iframe> --}}
+            <a href="/images/user/resume/{{user._id}}.pdf" class="btn" target="_blank">resume</a>
+            <button><a href="/update">update</a></button>
+        </div>
     </div>
 </div>

@@ -1,21 +1,30 @@
 <link rel="stylesheet" href="/stylesheets/company/update-company.css" />
-<form action="/company/compsignup" method="post">
+<form action="/company/updatecompany" method="post" enctype="multipart/form-data">
     <div class="main">
         <h1>update profile</h1>
-        <input type="text" name="companyname" placeholder="companyname" class="compname" /><br /><br />
-        <input type="email" name="email" placeholder="official email" /><br /><br />
-        <input type="password" name="password" placeholder="password" /><br /><br />
-        <input type="number" name="number" placeholder="mobile number" /><br /><br />
-        <input type="text" name="personname" placeholder="contact person's name" /><br /><br />
+        <input type="text" name="companyname" placeholder="companyname" class="compname" required
+            value="{{company.companyname}}" /><br /><br />
+        <input type="email" name="email" placeholder="official email" required value="{{company.email}}" /><br /><br />
+        <input type="password" name="password" placeholder="password" required
+            value="{{company.password}}" /><br /><br />
+        <input type="number" name="number" placeholder="mobile number" required
+            value="{{company.number}}" /><br /><br />
+        <input type="text" name="personname" placeholder="contact person's name" required
+            value="{{company.personname}}" /><br /><br />
         <select name="industryType">
             <option value=" ">industry type</option>
-            <option>accounting/finance</option>
+            <option selected>accounting/finance</option>
             <option>agriculure/dairy</option>
             <option>hotels/travel</option>
             <option>recruitment</option>
             <option>export/import</option>
         </select><br /><br />
-        <textarea name="description" id="description" placeholder="description"></textarea><br /><br />
+        <h2>additional inform</h2><br>
+        <textarea name="description" id="description" placeholder="description"
+            required>{{company.description}}</textarea><br /><br />
+        <input type="text" name="area" placeholder="area" value="{{company.area}}"><br /><br />
+        <input type="text" name="address" placeholder="address" value="{{company.address}}"><br /><br />
+        <input type="file" name="image">
         <button type="submit">update</button>
     </div>
 

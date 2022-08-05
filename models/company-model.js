@@ -37,6 +37,22 @@ const CompanySchema = mongoose.Schema({
         // required: true,
         // trim: true,
     },
+    description: {
+        type: String,
+        maxLength: 100,
+        trim: true,
+    },
+    area: {
+        type: String,
+        maxLength: 100,
+        trim: true,
+    },
+    address: {
+        type: String,
+        maxLength: 100,
+        trim: true,
+    }
+
 });
 
 module.exports = mongoose.model("company", CompanySchema);
