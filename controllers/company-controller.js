@@ -4,12 +4,15 @@ const bcrypt = require("bcrypt");
 const req = require("express/lib/request");
 const companyModel = require("../models/company-model");
 const async = require("hbs/lib/async");
+const jobModel = require("../models/job-model");
+const jobapplicationModel = require("../models/jobapplication-model");
+const nottificationModel = require("../models/nottification-model");
 // const companyModel = require("../models/company-model");
 
 const createCompany = async function (req, res) {
   const hash = await bcrypt.hash(req.body.password, 10);
   req.body.password = hash;
-  console.log(req.body);
+  // console.log(req.body);
   await CompanyModel.create(req.body);
   res.redirect('/company/complogin');
 };
@@ -24,14 +27,14 @@ const getSignupPage = function (req, res) {
 
 const getLoginPage = function (req, res) {
   if (req.session.Errormsg) {
-    console.log(req.session.Errormsg);
+    // console.log(req.session.Errormsg);
   }
   res.render("company/company-login", { name: "shamili", Errormsg: req.session.Errormsg });
   req.session.Errormsg = false
 };
 
 const doLogin = async function (req, res) {
-  console.log(req.body);
+  // console.log(req.body);
   let company = await CompanyModel.findOne({ email: req.body.email });
   console.log(company);
   if (company) {
@@ -61,7 +64,7 @@ const addJobPage = function (req, res) {
   res.render("company/add-job-form");
 };
 const addjob = async function (req, res) {
-  console.log(req.body);
+  // console.log(req.body);
   req.body.companyName = req.session.company.companyname;
   req.body.companyId = req.session.company._id;
   await JobModel.create(req.body);
@@ -84,9 +87,51 @@ const companyUpdatePage = async function (req, res) {
 }
 
 const getUpdatePage = function (req, res) {
-  console.log(req.session.company);
+  // console.log(req.session.company);
   res.render("company/update-company-page", { company: req.session.company });
 };
+const viewjob = async function (req, res) {
+  let { _id } = req.session.company
+  let allJobs = await jobModel.find({ companyId: _id })
+  res.render('company/viewjobs', { allJobs })
+}
+const viewJobApplication = async function (req, res) {
+  let { _id } = req.session.company
+  let jobapplications = await jobapplicationModel.find({ companyId: _id, status: "applied" })
+  console.log(jobapplications);
+  res.render('company/job-application', { jobapplications })
+
+}
+const acceptjob = async function (req, res) {
+  // console.log("hi");
+  let accept = await jobapplicationModel.findOneAndUpdate({ _id: req.params.id }, { status: "accepted" })
+  let nottificationObj = {
+    from: req.session.company.email,
+    to: accept.email,
+    fromName: req.session.company.companyname,
+    message: "your job application is accepted",
+    date: new Date().toLocaleDateString(),
+    time: new Date().toLocaleTimeString(),
+  }
+  await nottificationModel.create(nottificationObj);
+  console.log(nottificationObj);
+  res.redirect("/company/viewjobApplication")
+};
+const rejectjob = async function (req, res) {
+  let nottificationObj = {
+    from: req.session.company.email,
+    to: reject.email,
+    fromName: req.session.company.companyname,
+    message: "your job application is rejected",
+    date: new Date().toLocaleDateString(),
+    time: new Date().toLocaleTimeString(),
+  }
+  await nottificationModel.create(nottificationObj);
+  console.log(nottificationObj);
+
+
+  res.redirect("/company/viewjobApplication")
+}
 
 module.exports = {
   getSignupPage,
@@ -98,5 +143,9 @@ module.exports = {
   getUpdatePage,
   doLogin,
   addjob,
-  companyUpdatePage
+  companyUpdatePage,
+  viewjob,
+  viewJobApplication,
+  acceptjob,
+  rejectjob
 };

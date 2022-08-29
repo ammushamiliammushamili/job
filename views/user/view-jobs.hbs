@@ -3,10 +3,10 @@
 
 <h2>view job</h2>
 {{#each allJobs}}
-<div class="card" style="width: 900px; height:300px ">
+<div class="card" style="width: 600px; height:300px ">
     <div class="row g-0">
         <div class="col-md-4">
-            <img src="http://www.wallpapers13.com/wp-content/uploads/2016/01/Forest-Falls-desktop-background-wallpaper-1592428-25600x1600-falls-1366x768.jpg"
+            <img src="http://1.bp.blogspot.com/-tYs6lV4Oh7Y/Ti541M8EkWI/AAAAAAAACHM/-8r68R4fD_Y/s1600/Construction%2BCompany%2BBuilding%2BPicture.jpg"
                 class="img-fluid rounded-start" alt="..." style="height: 300px;">
 
         </div>
@@ -20,9 +20,25 @@
                 <p>{{vaccancy}}</p>
                 <p>{{salary}}</p>
                 <p>{{area}}</p>
+                <form action="/applyJob" method="post" id="applyjob">
+                    <input type="hidden" name="jobId" value="{{_id}}">
+                    <input type="hidden" name="companyName" value="{{companyName}}">
+                    <input type="hidden" name="companyId" value="{{companyId}}">
+                    <button type="submit" onclick="retun alert('successfully apply')">ApplyJob</button>
+                </form>
+
+
 
             </div>
         </div>
     </div>
 </div>
 {{/each}}
+<script>
+    let form = document.getElementById('applyjob')
+    form.addEventListener("submit", (e) => {
+        e.preventDefault()
+        alert('succesfully apply')
+        e.run()
+    })
+</script>

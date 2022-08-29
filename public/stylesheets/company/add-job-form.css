@@ -6,14 +6,14 @@ body {
     align-items: center;
     justify-content: center;
     background-size: cover;
-    background-image: url(https://image.freepik.com/free-photo/mockup-computer-keyboard-mouse-and-book-on-pink-background_44344-1755.jpg)
+    background-image: url(https://media.istockphoto.com/photos/office-desk-table-with-supplies-flat-lay-business-workplace-and-top-picture-id1129816005?b=1&k=20&m=1129816005&s=170667a&w=0&h=j6mKIbvi9LbZj8f5rdT6inZgCTZPIJ-J6rZefhwFZqU=)
 }
 
 input {
     width: 600px;
-    height: 40px;
+    /* height: 40px; */
     /* border-radius: 15px; */
-    color: black;
+    /* color: black; */
     font-weight: 700;
     font-style: italic;
     box-shadow: 10px 10px;
@@ -27,13 +27,14 @@ button {
     margin-left: 640px;
     margin-top: 30px;
     margin-bottom: 20px;
-    color: rgb(88, 7, 57);
+    /* color: rgb(88, 7, 57); */
     /* border-radius: 15px; */
     font-family: 'Courier New', Courier, monospace;
     font-weight: 700;
     font-size: large;
     color: white;
-    background-color: rgb(88, 7, 57);
+    background-color: black;
+    border-radius: 10px;
 }
 
 h1 {
@@ -41,12 +42,8 @@ h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 900;
     /* background-color: rgb(75, 9, 9); */
-    color: rgb(88, 7, 57);
+    color: black;
     margin-right: 200px;
     font-size: 60px;
     margin-top: 15px;
-}
-
-input:hover {
-    background-color: pink;
 }

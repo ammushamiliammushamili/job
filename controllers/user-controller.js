@@ -3,6 +3,9 @@ const bcrypt = require("bcrypt");
 const JobModel = require("../models/job-model");
 const userModel = require("../models/user-model");
 const async = require("hbs/lib/async");
+const JobapplicationModel = require("../models/jobapplication-model");
+const jobapplicationModel = require("../models/jobapplication-model");
+const nottificationModel = require("../models/nottification-model");
 
 
 const createUser = async function (req, res) {
@@ -85,6 +88,35 @@ const viewjobsPage = async function (req, res) {
     console.log(allJobs);
     res.render('user/view-jobs', { allJobs })
 }
+const viewjobapplication = async function (req, res) {
+    // let{_id}=req.session.user
+    let jobapplication = await jobapplicationModel.find({ userId: req.session.user._id })
+    res.render("user/viewjobapplication", { jobapplication })
+}
+const applyjob = async function (req, res) {
+    console.log(req.body);
+    let d = new Date().toLocaleDateString()
+    console.log(d);
+    console.log(req.session.user);
+    let { jobId, companyName, companyId } = req.body;
+    let { _id, username, email, number } = req.session.user;
+    let jobapplication = await JobapplicationModel.create({
+        jobId: jobId,
+        userId: _id,
+        userName: username,
+        email: email,
+        number: number,
+        companyId, companyName,
+        ApplyDate: d,
+    });
+    console.log(jobapplication);
+    res.redirect("/")
+};
+const nottificationPage = async function (req, res) {
+    let allnottifications = await nottificationModel.find({ to: req.session.user.email })
+    res.render('user/notification', { allnottifications })
+
+}
 
 module.exports = {
     getHomePage,
@@ -96,5 +128,9 @@ module.exports = {
     doLogin,
     viewjobsPage,
     userhomepage,
-    updateuserprofile
+    updateuserprofile,
+    applyjob,
+    viewjobapplication,
+    nottificationPage
+
 };

@@ -1,0 +1,9 @@
+.nav-link {
+    color: white;
+    transition: all .5s;
+}
+
+.nav-link:hover {
+    background: white;
+    color: black
+}

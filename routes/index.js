@@ -1,4 +1,5 @@
 var express = require("express");
+const { getLoginPage } = require("../controllers/company-controller");
 var router = express.Router();
 
 let {
@@ -13,6 +14,9 @@ let {
     getHomePage,
     userhomepage,
     updateuserprofile,
+    applyjob,
+    viewjobapplication,
+    nottificationPage,
 } = require("../controllers/user-controller");
 const checkUser = require("../middilewares/check-user");
 
@@ -34,8 +38,16 @@ router.route("/login").get(userLoginPage).post(doLogin);
 router.get("/profile", checkUser, userProfilepage);
 
 router.get("/update", checkUser, userUpdatePage);
+
 router.post('/update', checkUser, updateuserprofile)
 
 router.get("/viewjobs", checkUser, viewjobsPage)
-router.get("/homepage", userhomepage)
+
+router.get("/homepage", checkUser, userhomepage)
+
+router.post('/applyjob', checkUser, applyjob)
+
+router.get("/viewjobapplication", checkUser, viewjobapplication)
+
+router.get('/notification', checkUser, nottificationPage)
 module.exports = router;
