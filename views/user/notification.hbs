@@ -1,8 +1,15 @@
-<h1>NOTTIFICATIONS</h1>
-{{#each allnottifications}}
-<p>{{from}}</p>
-<p>{{fromname}}</p>
-<p>{{time}}</p>
-<p>{{date}}</p>
-<p>{{message}}</p>
-{{/each}}
+<link rel="stylesheet" href="/stylesheets/notification.css">
+
+<div class="main">
+    <h1>NOTIFICATIONS</h1>
+
+    {{#each allnottifications}}
+    <div class="para">
+        <p>{{from}}</p>
+        <p>{{fromname}}</p>
+        <p>{{time}}</p>
+        <p>{{date}}</p>
+        <p>{{message}}</p>
+        {{/each}}
+    </div>
+</div>

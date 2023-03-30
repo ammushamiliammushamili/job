@@ -1,0 +1,30 @@
+body {
+    background-image: url(https://i.pinimg.com/736x/d1/b0/83/d1b083ac9d9344250908137e08d6eb20.jpg);
+    background-size: cover;
+}
+
+.main {
+    width: 500px;
+    height: 500px;
+    border: 10px solid white;
+    margin-left: 340px;
+    background: linear-gradient(to bottom, #463f3f, #b9b3b3);
+    margin-top: 35px;
+
+}
+
+.para {
+    margin-top: 70px;
+    margin-left: 110px;
+    padding: 20px;
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+h1 {
+    margin-left: 100px;
+    color: green;
+    margin-top: 30px;
+    font-style: italic;
+}

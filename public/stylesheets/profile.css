@@ -7,11 +7,13 @@ body {
     /* justify-content: center; */
     background-size: cover;
     background-image: url('https://img.freepik.com/premium-photo/elegant-black-office-desktop-with-laptop-cup-coffee-top-view_96727-843.jpg?w=900');
+    background-image: url(https://media.istockphoto.com/photos/top-view-of-black-office-desk-with-notebook-and-supplies-picture-id902420478?k=6&m=902420478&s=170667a&w=0&h=vtyJ-cPpsXB2rhtan-CjiDbPx116AdVRB8crTn71twc=);
 }
 
 .name {
     /* margin-left: 89px; */
-    color: white;
+    color: black;
+    margin-left: 70px;
 }
 
 .btn {
@@ -23,14 +25,19 @@ p {
     margin-top: -10px;
     /* font-weight: 800; */
     /* font-size: 20px; */
-    color: white;
+    color: black;
     padding: 4px;
+    margin-left: 300px;
+    font-size: 25px;
+    text-transform: capitalize;
+    color: black;
+    font-weight: 600;
 }
 
 button {
     /* margin-left: 350px; */
     /* margin-top: 30px;s */
-    width: 80px;
+    /* width: 80px; */
     height: 40px;
     border-radius: 25px;
 
@@ -42,4 +49,48 @@ img {
     /* padding-top: 80px; */
     margin-top: 10px;
     /* margin-left: 89px; */
+    /* background-color: rgb(80, 68, 68); */
+    margin-left: 20px;
+
+}
+
+.container {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(5, 4, 4, 0.927) 0px 30px 60px -30px, rgba(8, 9, 9, 0.813) 0px -2px 6px 0px inset;
+    background: linear-gradient(to bottom, #463f3f, #b9b3b3);
+    border: 10px solid white;
+    width: 600px;
+    color: black;
+    margin-left: 570px;
+    margin-top: 10px;
+    height: 550px;
+    border-radius: 15px;
+}
+
+.para {
+    /* margin-top: 70; */
+    margin-left: 40px;
+}
+
+#dob {
+    margin-top: -200px;
+    padding: 25px;
+    font-size: 35px;
+}
+
+.resume {
+    color: rgb(51, 31, 163);
+    background-color: rgb(131, 131, 140);
+    margin-left: 350px;
+    /* margin-top: -40px; */
+    width: 170px;
+    margin-top: 50px;
+}
+
+
+
+.update {
+    margin-top: -90px;
+    width: 170px;
+    background-color: rgb(101, 110, 98);
+
 }

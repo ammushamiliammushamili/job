@@ -10,18 +10,35 @@ body {
 
 }
 
+.main {
+    height: 500px;
+    width: 500px;
+    border: 5px solid black;
+    margin-top: 20px;
+    margin-right: 300px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(5, 4, 4, 0.927) 0px 30px 60px -30px, rgba(8, 9, 9, 0.813) 0px -2px 6px 0px inset;
+    background: linear-gradient(to bottom, #a49292, #b9b3b3);
+
+
+}
+
 .image {
     width: 15px;
     margin-top: 40px;
     /* margin-top: 280; */
+    margin-left: 10px;
 
 }
 
 .data {
-    margin-right: 350px;
+    margin-right: 300px;
     color: black;
-    font-weight: 600;
+    font-weight: 800;
     font-style: italic;
+    margin-left: 250px;
+    margin-top: -190px;
+    /* padding-top: 40px; */
+    font-size: 29px;
 }
 
 button {
@@ -31,9 +48,23 @@ button {
     border-radius: 15px;
     outline: none;
     text-decoration: none;
+    margin-top: 100px;
+    margin-right: 180px;
+    padding-bottom: 60px;
+    background-color: rgb(148, 148, 206);
 }
+
 
 img {
     width: 200px;
     height: 200px;
+}
+
+.name {
+    margin-left: 70px;
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: bolder;
+    text-shadow: 0 0 3px #ff0000;
+
 }

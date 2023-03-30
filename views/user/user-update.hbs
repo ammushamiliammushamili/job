@@ -3,34 +3,48 @@
 <div class="flex-container">
     <div class="flex-child image"></div>
     <div class="flex-child text">
-        <h1 class="heading">update profile</h1>
+        <div class="main">
+            <h1 class="heading">UPDATE PROFILE</h1>
 
-        <form action="/update" method="post" enctype="multipart/form-data">
-            <input type="text" name="username" placeholder="username" id="username" required
-                value="{{user.username}}" /><br /><br />
-            <input type="text" name="address" placeholder="address" id="address" required
-                value="{{user.address}}"><br><br>
-            <input type="email" name="email" placeholder="email" id="email" required
-                value="{{user.email}}" /><br /><br />
-            {{!-- <input type="password" name="password" placeholder="password" id="password" required --}} {{!--
-                value="{{user.password}}" /><br /><br /> --}}
-            <input type="number" name="number" placeholder="mobile number" id="number" required
-                value="{{user.number}}"><br><br>
+            <div class="head">
+                <form action="/update" method="post" enctype="multipart/form-data">
+                    <input type="text" name="username" placeholder="username" id="username" required
+                        value="{{user.username}}" /><br /><br />
+                    <div class="address">
+                        <input type="text" name="address" placeholder="address" id="address" required
+                            value="{{user.address}}"><br><br>
+                    </div>
+                    <input type="email" name="email" placeholder="email" id="email" required
+                        value="{{user.email}}" /><br /><br />
+                    {{!-- <input type="password" name="password" placeholder="password" id="password" required --}}
+                        {{!-- value="{{user.password}}" /><br /><br /> --}}
+                    <div class="num">
+                        <input type="number" name="number" placeholder="mobile number" id="number" required
+                            value="{{user.number}}"><br><br>
+                    </div>
+            </div>
             <select name="workStatus">
                 <option value="">Work Status</option>
                 <option selected>fresher</option>
                 <option>experienced</option>
             </select><br><br>
-            <h2>additional informations</h2>
-            <input type="text" name="skils" placeholder="skils" id="skils" required value="{{user.skills}}"><br><br>
-            <input type="text" name="education" placeholder="education" id="education" required
-                value="{{user.education}}"><br><br>
-
-            <input type="file" name="image" required><br><br>
-            <input type="file" name="resume" required>
+            <div class="add">
+                <h2>additional informations</h2>
+                <div class="form">
+                    <input type="text" name="skils" placeholder="skils" id="skils" required
+                        value="{{user.skills}}"><br><br>
+                    <input type="text" name="education" placeholder="education" id="education" required
+                        value="{{user.education}}"><br><br>
+                </div>
+                <div class="link">
+                    <input type="file" name="image" required><br><br>
+                    <input type="file" name="resume" required>
+                </div>
+            </div>
             <button type="submit">update</button>
 
+            </form>
+        </div>
 
-        </form>
     </div>
 </div>

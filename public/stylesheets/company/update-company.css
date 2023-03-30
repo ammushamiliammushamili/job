@@ -8,23 +8,42 @@ body {
     background-size: cover;
     background-image: url('https://media.istockphoto.com/photos/white-desk-office-with-laptop-smartphone-and-other-supplies-with-cup-picture-id956234478?b=1&k=20&m=956234478&s=170667a&w=0&h=7W_8PjPhBtiiNRQ7g5MJB5BWTWTiJ1wm4W3lgHEV3Ao=');
 
+
+}
+
+.main {
+    height: 530px;
+    width: 790px;
+    border: 10px solid black;
+    border-radius: 50px;
+    margin-left: 520px;
+    margin-top: 30px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(5, 4, 4, 0.927) 0px 30px 60px -30px, rgba(8, 9, 9, 0.813) 0px -2px 6px 0px inset; */
+    /* background: linear-gradient(to bottom, #ffffff, #b9b3b3); */
+
+
 }
 
 input {
-    width: 500px;
-    /* height: 30px; */
+    width: 350px;
+    height: 30px;
     /* border-radius: 15px; */
     color: black;
     font-weight: 700;
     font-style: italic;
     box-shadow: 10px 10px black;
     margin-top: 0.20px;
-    margin-left: 500px;
+    margin-left: 10px;
 
 }
 
+input,
+placeholder {
+    font-size: 15px;
+}
+
 h1 {
-    padding-left: 500px;
+    padding-left: 200px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 900;
     /* background-color: rgb(75, 9, 9); */
@@ -32,33 +51,37 @@ h1 {
     /* margin-right: 200px; */
     font-size: 60px;
     margin-top: 0.5px;
+    margin-left: 60px;
+    text-shadow: 0 0 3px #ff0000;
 }
 
 select {
-    width: 500px;
+    width: 350px;
+
     height: 30px;
     box-shadow: 10px 10px black;
     border-color: black;
     margin-left: 500px;
-
-
+    /* margin-left: 60px; */
+    margin-left: 10px;
 }
 
 textarea {
-    width: 500px;
+    width: 355px;
     height: 30px;
     box-shadow: 10px 10px black;
-    margin-left: 500px;
+    /* padding-right: 300px; */
 
-
-
+    /* margin-left: 500px; */
+    font-size: 15px;
 }
 
 button {
-    width: 450px;
-    /* height: 30px; */
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
     /* margin-left: 150px; */
-    margin-top: 5px;
+    margin-top: 45px;
     /* margin-bottom:px; */
     /* color: rgb(88, 7, 57); */
     /* border-radius: 15px; */
@@ -67,13 +90,22 @@ button {
     font-size: large;
     color: white;
     background-color: black;
-    margin-left: 500px;
-
+    margin-right: 300px;
 }
 
 h2 {
     color: black;
     margin-top: 2px;
     margin-left: 500px;
+    margin-left: 60px;
 
+
+}
+
+.add {
+    padding-right: 300px;
+    width: 350px;
+    height: 15px;
+    margin-left: 340px;
+    margin-top: -360px;
 }

@@ -6,7 +6,8 @@ body {
     align-items: center;
     justify-content: center;
     background-size: cover;
-    background-image: url(https://media.istockphoto.com/photos/white-computer-mouse-and-keyboard-on-white-background-picture-id1090827834?k=6&m=1090827834&s=170667a&w=0&h=1ogJHPxP1szwlzdOi-rh6hkP-bpyy8Llb48b7QeOYwo=);
+    /* background-image: url(https://media.istockphoto.com/photos/white-computer-mouse-and-keyboard-on-white-background-picture-id1090827834?k=6&m=1090827834&s=170667a&w=0&h=1ogJHPxP1szwlzdOi-rh6hkP-bpyy8Llb48b7QeOYwo=); */
+    background-image: url(https://media.istockphoto.com/photos/top-view-of-black-office-desk-with-notebook-and-supplies-picture-id902420478?k=6&m=902420478&s=170667a&w=0&h=vtyJ-cPpsXB2rhtan-CjiDbPx116AdVRB8crTn71twc=);
 }
 
 input {
@@ -20,30 +21,34 @@ input {
     padding: 7px;
     /* margin-left: 400px; */
     margin-top: 40px;
+    margin-left: 190px;
 }
 
 input,
 ::placeholder {
-    color: #000;
+    color: white;
 }
 
 button {
     width: 300px;
     height: 40px;
-    margin-left: 130px;
+    margin-left: 290px;
     margin-top: 30px;
     margin-bottom: 20px;
-    background-color: black;
+    background-color: white;
     /* border-radius: 15px; */
     font-family: 'Courier New', Courier, monospace;
-    font-weight: 700;
+    font-weight: 900;
     font-size: large;
-    color: white;
-    box-shadow: 10px 10px;
+    color: black;
+    /* box-shadow: 10px 10px; */
 
 }
 
 h1 {
     text-align: center;
     font-size: 60px;
+    color: white;
+    margin-left: 200px;
+
 }

@@ -46,4 +46,6 @@ h1 {
     margin-right: 200px;
     font-size: 60px;
     margin-top: 15px;
+    text-shadow: 0 0 3px #ff0000;
+
 }

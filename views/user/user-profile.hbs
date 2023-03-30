@@ -16,15 +16,19 @@
 
         <div class="data">
 
-            <p id="dob">{{user.username}}</p>
-            <p>{{user.address}}</p>
-            <p>{{user.email}}</p>
-            <p>{{user.number}}</p>
-            <p>{{user.skills}}</p>
-            <p>{{user.education}}</p>
+            <div class="para">
+                <p id="dob">{{user.username}}</p>
+
+                <p>{{user.address}}</p>
+                <p>{{user.email}}</p>
+                <p>{{user.number}}</p>
+                <p>{{user.skills}}</p>
+                <p>{{user.education}}</p>
+            </div>
             {{!-- <iframe src="/images/user/resume/{{user._id}}.pdf"></iframe> --}}
-            <a href="/images/user/resume/{{user._id}}.pdf" class="btn" target="_blank">resume</a><br>
-            <button><a href="/update" onclick="retrun alert('successfully updated')">update</a></button>
+            <button class="resume"> <a href="/images/user/resume/{{user._id}}.pdf" class="btn"
+                    target="_blank">resume</a></button><br>
+            <button class="update"><a href="/update" onclick="retrun alert('successfully updated')">update</a></button>
         </div>
     </div>
 </div>

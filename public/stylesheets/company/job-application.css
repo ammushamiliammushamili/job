@@ -2,3 +2,87 @@ body {
     background-image: url('https://1.bp.blogspot.com/-50LYalxIiRw/X6L0IVflpyI/AAAAAAAAIMQ/C9H1vabaiAoIfSCohN0zrebppzTLZszdQCLcBGAsYHQ/s960/powerpoint-background-84.jpg');
     background-size: cover;
 }
+
+img {
+    width: 200px;
+    height: 200px;
+    margin-left: 190px;
+    margin-top: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(5, 4, 4, 0.927) 0px 30px 60px -30px, rgba(8, 9, 9, 0.813) 0px -2px 6px 0px inset;
+    border-radius: 15px;
+}
+
+.card {
+    height: 500px;
+    width: 590px;
+    border: 5px solid black;
+    margin-top: 15px;
+    margin-right: 370px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(5, 4, 4, 0.927) 0px 30px 60px -30px, rgba(8, 9, 9, 0.813) 0px -2px 6px 0px inset;
+    background: linear-gradient(to bottom, #9b9191, #b9b3b3);
+    margin-left: 650px;
+
+}
+
+p {
+    margin-left: 229px;
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.main {
+    display: inline-block;
+    /* margin-left: 150px; */
+}
+
+.accept {
+    margin-left: 60px;
+    text-shadow: 0 0 3px #ff0000;
+    background-color: green;
+    box-shadow: -5px 5px black;
+    font-weight: 700;
+
+}
+
+.accept:hover {
+    background-color: lightgreen;
+}
+
+.resume {
+    margin-left: 10px;
+    text-shadow: 0 0 3px #ff0000;
+    background-color: rgb(106, 106, 208);
+    box-shadow: -5px 5px black;
+    font-weight: 700;
+
+}
+
+.resume:hover {
+    background-color: rgb(151, 151, 184);
+}
+
+.reject {
+    margin-left: 10px;
+    text-shadow: 0 0 3px #ff0000;
+    background-color: red;
+    box-shadow: -5px 5px black;
+    font-weight: 700;
+
+}
+
+.reject:hover {
+    background-color: rgb(152, 59, 59);
+}
+
+button {
+    width: 150px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+h1 {
+    margin-left: 790px;
+    text-shadow: 0 0 3px #ff0000;
+
+}
